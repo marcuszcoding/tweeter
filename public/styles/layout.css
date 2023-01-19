@@ -24,11 +24,3 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
-.header {
-color: #FFFF;
-background-color: #4056A1;
-height: 120px;
-font-family: "Bungee", sans-serif;
-margin: 1.5em
-}
