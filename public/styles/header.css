@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  height: 520px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFA600;
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+  padding-top: 120px;
+}
+
+header div h2 {
+  color: #FFFFFF;
+}

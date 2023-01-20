@@ -5,16 +5,18 @@ nav {
   height: 120px;
   width: 100%;
   justify-content: space-between;
+  position: fixed;
 }
 
-nav span {
+/* TWEETER */
+.tweetLogo {
   font-family: "Bungee", sans-serif;
   margin: 1.0em;
   padding-top: 17px;
   font-size: 34px;
 }
-
-nav div {
+/* text */
+.newTweetNav {
   display: flex;
   margin-right: 1.5em;
   flex-direction: column;
