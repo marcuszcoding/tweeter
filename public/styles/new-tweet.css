@@ -2,7 +2,7 @@
   width: 100%
 }
 
-textarea {
+#tweet-text {
   font-family: "Sans Source Pro", sans-serif;
   border: none;
   border-bottom: 4px solid black;
@@ -10,10 +10,10 @@ textarea {
   background-color: #f4f1ec;
 }
 
-
 .bottom-elements{
   display: flex;
   justify-content: space-between;
+  margin-top: 0.5em;
 }
 
 button {
@@ -24,4 +24,72 @@ button {
 
 .counter {
   font-family: "Bungee", sans-serif;
+}
+
+
+
+/*  Tweets After Post CSS */
+
+.tweet {
+  margin: 2em 0;
+  padding: 0.5em;
+  display: flex;
+  width: 100%;
+  background-color: #f4f1ec;
+  border: 4px solid black;
+  flex-direction: column;
+}
+
+.tweet-header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 1em;
+  justify-content: space-between;
+  
+}
+
+.tweet-header span{
+  opacity: 0.5;
+}
+
+.tweet:hover {
+  box-shadow: 10px 5px 5px rgb(142, 165, 235);
+}
+
+div textarea {
+  font-family: "Sans Source Pro", sans-serif;
+  width: 100%;
+  margin-top: 2em;
+  resize: none;
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 4px solid black;
+}
+
+.tweet-footer {
+ display: flex;
+ width: 100%;
+ flex-direction: row;
+ justify-content: space-between;
+ margin-top: 0.5em;
+ margin-bottom: 1.0em;
+ font-size: 15px;
+ padding: 0 0.75em;
+}
+
+.tweet-footer span {
+  font-family: "Sans Source Pro", sans-serif;
+}
+
+.fa-flag:hover{
+ color: goldenrod
+}
+
+.fa-retweet:hover{
+  color: goldenrod
+}
+
+.fa-heart:hover{
+  color: goldenrod
 }
