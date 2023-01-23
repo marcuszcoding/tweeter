@@ -5,7 +5,12 @@
  */
 
 // Fake data taken from initial-tweets.json
-const data = [
+// Test / driver code (temporary). Eventually will get this from the server.
+
+
+//User Objects
+// Fake data taken from initial-tweets.json
+const tweetData = [
   {
     "user": {
       "name": "Newton",
@@ -30,15 +35,47 @@ const data = [
   }
 ]
 
+$(document).ready(function() {
+  const createTweetElement = function(tweet) {
+    return `
+  <article class="tweet">
+  <header class="tweet-header"> 
+      <div>
+        <i class="fa-solid fa-user"></i>
+        ${tweet.user.name}
+      </div>
+      <span>
+      ${tweet.user.handle}
+      </span>
+  </header>
+  <div class="text">
+    <textarea>${tweet.content.text}</textarea>
+  </div>
+  <footer class="tweet-footer">
+    <span>${tweet.created_at}</span>
+    <div>
+      <i class="fa-solid fa-flag"></i>
+      <i class="fa-sharp fa-solid fa-retweet"></i>
+      <i class="fa-solid fa-heart"></i>
+    </div>
+  </footer>
+</article>`
+}
+
 const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+  // loops through tweets
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
+  for (let tweet of tweetData) {
+    $('#tweets-container').append(createTweetElement(tweet));
+  }
 }
 
-const createTweetElement = function(tweet) {
-let $tweet = $(`<article class="tweet">Hello World!</article>`);
-return $tweet;
-}
+renderTweets(tweetData)
 
-renderTweets(data);
+// $('#tweets-container').append($tweet);
+// Test / driver code (temporary)
+// console.log($tweet); // to see what it looks like
+// console.log($('#tweets-container'))
+// $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+})
