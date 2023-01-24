@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
-    $('#tweets-container').append(createTweetElement(tweet));
+    $('#tweets-container').prepend(createTweetElement(tweet));
   }
 }
 
@@ -68,5 +68,10 @@ $form.on('submit', function (event) {
   }
   const data = $('#tweet-text').serialize();
   $.ajax("/tweets", { method: 'POST', data})
+  .then(function(data){
+    loadTweets()
+    $('#tweet-form').trigger("reset");
+    $('.counter').val(140);
+  })
   })
 })
