@@ -1,3 +1,18 @@
+.error {
+  margin-top: 1em;
+  width: 100%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: red;
+}
+
+.error-message{
+  font-family: "Sans Source Pro", sans-serif;
+  font-size: 30px;
+  color: red;
+  padding: 0.25em
+}
+
 .new-tweet{
   width: 100%
 }

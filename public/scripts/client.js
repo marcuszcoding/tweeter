@@ -18,6 +18,8 @@ const escapeText = function (str) {
 };
 
 $(document).ready(function() {
+  const errorBox = $('.error')
+  errorBox.hide()
   const createTweetElement = function(tweet) {
     return `
   <article class="tweet">
@@ -62,19 +64,26 @@ loadTweets()
 
 // renderTweets(tweetData)
 
+const errorHandler = function(error) {
+errorBox.slideDown("slow")
+$('.error-message').text(error)
+}
+
 const $form = $('#tweet-form');
 $form.on('submit', function (event) { 
   event.preventDefault()
   let tweetValue = $('#tweet-text').val();
   if (tweetValue === "") {
-   return alert("This tweet is empty")
+    errorHandler("Error! This tweet is empty! Please enter something to tweet!")
   }
   if (tweetValue.length > 140) {
-   return alert("This tweet is too long")
+    errorHandler("Error! This tweet is too long! Please keep it under 140 characters!")
+    return
   }
   const data = $('#tweet-text').serialize();
   $.ajax("/tweets", { method: 'POST', data})
   .then(function(data){
+    errorBox.slideUp()
     loadTweets()
     $('#tweet-form').trigger("reset");
     $('.counter').val(140);
