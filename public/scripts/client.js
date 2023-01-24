@@ -11,6 +11,12 @@
 //User Objects
 // Fake data taken from initial-tweets.json
 
+const escapeText = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 $(document).ready(function() {
   const createTweetElement = function(tweet) {
     return `
@@ -25,7 +31,7 @@ $(document).ready(function() {
       </span>
   </header>
   <div class="text">
-    <textarea>${tweet.content.text}</textarea>
+    <textarea>${escapeText(tweet.content.text)}</textarea>
   </div>
   <footer class="tweet-footer">
     <span>${jQuery.timeago(tweet.created_at)}</span>
