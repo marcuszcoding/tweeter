@@ -1,3 +1,5 @@
+/* Error box styling */
+
 .error {
   margin-top: 1em;
   width: 100%;
@@ -13,8 +15,10 @@
   padding: 0.25em
 }
 
+/* Styling for input tweet box */
+
 .new-tweet{
-  width: 100%
+  width: 100%;
 }
 
 #tweet-text {
@@ -42,8 +46,6 @@ button {
   font-family: "Bungee", sans-serif;
 }
 
-
-
 /*  Tweets After Posting  */
 
 .tweet {
@@ -62,13 +64,13 @@ button {
   flex-direction: row;
   margin-top: 1em;
   justify-content: space-between;
-  
 }
 
 .tweet-header span{
   color: lightgray;
 }
 
+/* If hovering tweet */
 .tweet:hover {
   box-shadow: 10px 5px 5px rgb(142, 165, 235);
 }
@@ -98,14 +100,15 @@ div textarea {
   font-family: "Sans Source Pro", sans-serif;
 }
 
+/* Symbols */
 .fa-flag:hover{
- color: goldenrod
+ color: goldenrod;
 }
 
 .fa-retweet:hover{
-  color: goldenrod
+  color: goldenrod;
 }
 
 .fa-heart:hover{
-  color: goldenrod
+  color: goldenrod;
 }

@@ -1,6 +1,6 @@
 .main-header {
   display: flex;
-  height: 520px; /* this is equal to 400px with the 120 padding-top*/
+  height: 520px; /*This is equal to 400px with the 120 padding-top*/
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -15,14 +15,14 @@ header div h2 {
 }
 
 .notBold {
-  font-weight: normal
+  font-weight: normal;
 }
-/* Header styling when above 768px, makes image size apporapriate */
-@media (min-width: 768px) {
+/*Header styling when 1024px and above, makes image size apporapriate*/
+@media (min-width: 1024px) {
   .main-header {
     padding-top: 0;
     height: 400px;
     width: 35%;
-    margin-right: 2rem
+    margin-right: 2rem;
   }
 }

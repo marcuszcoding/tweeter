@@ -11,15 +11,15 @@
 //User Objects
 // Fake data taken from initial-tweets.json
 
-const escapeText = function (str) {
+const escapeText = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
 $(document).ready(function() {
-  const errorBox = $('.error')
-  errorBox.hide()
+  const errorBox = $('.error');
+  errorBox.hide();
   const createTweetElement = function(tweet) {
     return `
   <article class="tweet">
@@ -43,50 +43,48 @@ $(document).ready(function() {
       <i class="fa-solid fa-heart"></i>
     </div>
   </footer>
-</article>`
-}
+  </article>`;
+  };
 
-const renderTweets = function(tweets) {
-  for (let tweet of tweets) {
-    $('#tweets-container').prepend(createTweetElement(tweet));
-  }
-}
+  const renderTweets = function(tweets) {
+    for (let tweet of tweets) {
+      $('#tweets-container').prepend(createTweetElement(tweet));
+    }
+  };
 
-const loadTweets = function() {
-  $.ajax("/tweets", { method: 'GET'})
-  .then(function(data){
-    console.log(data)
-    renderTweets(data)
-  })
-}
+  const loadTweets = function() {
+    $.ajax("/tweets", { method: 'GET'})
+      .then(function(data) {
+        renderTweets(data);
+      });
+  };
 
-loadTweets()
+  loadTweets();
 
-// renderTweets(tweetData)
+  const errorHandler = function(error) {
+    errorBox.slideDown("slow");
+    $('.error-message').text(error);
+  };
 
-const errorHandler = function(error) {
-errorBox.slideDown("slow")
-$('.error-message').text(error)
-}
-
-const $form = $('#tweet-form');
-$form.on('submit', function (event) { 
-  event.preventDefault()
-  let tweetValue = $('#tweet-text').val();
-  if (tweetValue === "") {
-    errorHandler("Error! This tweet is empty! Please enter something to tweet!")
-  }
-  if (tweetValue.length > 140) {
-    errorHandler("Error! This tweet is too long! Please keep it under 140 characters!")
-    return
-  }
-  const data = $('#tweet-text').serialize();
-  $.ajax("/tweets", { method: 'POST', data})
-  .then(function(data){
-    errorBox.slideUp()
-    loadTweets()
-    $('#tweet-form').trigger("reset");
-    $('.counter').val(140);
-  })
-  })
-})
+  const $form = $('#tweet-form');
+  $form.on('submit', function(event) {
+    event.preventDefault();
+    let tweetValue = $('#tweet-text').val();
+    if (tweetValue === "") {
+      errorHandler("Error! This tweet is empty! Please enter something to tweet!");
+      return;
+    }
+    if (tweetValue.length > 140) {
+      errorHandler("Error! This tweet is too long! Please keep it under 140 characters!");
+      return;
+    }
+    const data = $('#tweet-text').serialize();
+    $.ajax("/tweets", { method: 'POST', data})
+      .then(function(data) {
+        errorBox.slideUp();
+        loadTweets();
+        $('#tweet-form').trigger("reset");
+        $('.counter').val(140);
+      });
+  });
+});

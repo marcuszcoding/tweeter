@@ -27,8 +27,8 @@ nav {
 .fa-angles-down {
  color: red;
 }
-/* changes colour of nav bar when below 768 px */
-@media (max-width: 768px) {
+/* changes colour of nav bar when below 1024 px, has to be set one below 1024 or it will change at 1024 as well */
+@media (max-width: 1023px) {
   nav {
     background-color: #FFA600;
     background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");

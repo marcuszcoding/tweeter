@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ 
 html {
   box-sizing: border-box;
 }
@@ -20,6 +21,7 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -30,8 +32,8 @@ body {
   background-color: #f4f1ec;
  }
 
- /* Organizes header on the left hand side and tweets on the right hand side when above 768px size */
- @media (min-width: 768px) {
+ /* Organizes header on the left hand side and tweets on the right hand side when above 1024px size */
+ @media (min-width: 1024px) {
   .layout-container {
     display: flex;
     padding: 10rem 2rem 2rem 2rem;
