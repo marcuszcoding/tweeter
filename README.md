@@ -6,10 +6,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Finished Product
 
-!["Screenshot of Dekstop Tweeter"](/Users/marcuszimmer/module4/tweeter/docs/tweet-box.png)
-!["Screenshot of Mobile and Tablet"](/Users/marcuszimmer/module4/tweeter/docs/mobile-tablet.png)
-!["Screenshot of Error 1"](/Users/marcuszimmer/module4/tweeter/docs/error-1.png)
-!["Screenshot of Error 2"](/Users/marcuszimmer/module4/tweeter/docs/error-2.png)
+!["Screenshot of Dekstop Tweeter"](https://github.com/marcuszcoding/tweeter/blob/master/docs/tweet-box.png)
+!["Screenshot of Mobile and Tablet"](https://github.com/marcuszcoding/tweeter/blob/master/docs/mobile-tablet.png)
+!["Screenshot of Error 1"](https://github.com/marcuszcoding/tweeter/blob/master/docs/error-1.png)
+!["Screenshot of Error 2"](https://github.com/marcuszcoding/tweeter/blob/master/docs/error-2.png)
 
 ## Key Features
 
