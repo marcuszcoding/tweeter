@@ -36,13 +36,14 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
+    <div class="layout-container">
     <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Marcus Zimmer</h2>
+          <h2 class="name-holder">Marcus <span class="notBold">Zimmer</span></h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
@@ -51,7 +52,7 @@
         <div class="error">
           <span class="error-message"></span>
         </div>
-        <h2>Compose a Tweet</h2>
+        <h2 id="tweet-title">Compose a Tweet</h2>
         <form id="tweet-form" method="POST" action="/tweets">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -65,5 +66,6 @@
       <section id="tweets-container">
     </section>
     </main>
+    </div>
   </body>
 </html>

@@ -29,3 +29,22 @@ body {
   width: 90%;
   background-color: #f4f1ec;
  }
+
+ /* Organizes header on the left hand side and tweets on the right hand side when above 768px size */
+ @media (min-width: 768px) {
+  .layout-container {
+    display: flex;
+    padding: 10rem 2rem 2rem 2rem;
+  }
+  main {
+    align-self: flex-end;
+    width: 60%
+  }
+  #tweet-title{
+    margin: 0
+  }
+  .name-holder{
+    margin-top: 0;
+  }
+
+ }

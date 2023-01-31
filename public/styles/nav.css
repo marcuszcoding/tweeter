@@ -11,8 +11,8 @@ nav {
 /* TWEETER */
 .tweetLogo {
   font-family: "Bungee", sans-serif;
-  margin: 1.0em;
-  padding-top: 17px;
+  margin: 1.5em;
+  padding-top: 12px;
   font-size: 34px;
 }
 /* text */
@@ -26,4 +26,11 @@ nav {
 
 .fa-angles-down {
  color: red;
+}
+/* changes colour of nav bar when below 768 px */
+@media (max-width: 768px) {
+  nav {
+    background-color: #FFA600;
+    background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+  }
 }
